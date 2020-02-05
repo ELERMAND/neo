@@ -15,7 +15,7 @@ https://www.donationalerts.com/r/neongenius
 • <code>apt upgrade</code><br>
 • <code>apt install git</code><br>
 • <code>git clone https://github.com/ELERMAND/neo</code><br>
-• <code>sh spymer/install.sh</code><br>   
+• <code>sh neo/install.sh</code><br>   
 • <code>cd neo</code><br>
 <br>
 OR:
