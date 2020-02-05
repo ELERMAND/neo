@@ -1,23 +1,29 @@
 #!/bin/bash
 clear
+from __future__ import unicode_literals
 import os
-import time
 import sys
-import random
+import time
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from halo import Halo
 
-spinner = Halo(text='Downloading dataset.zip', spinner='dots')
+spinner = Halo(text='Such Spins', spinner='dots')
 
 try:
     spinner.start()
-    for i in range(100):
-        spinner.text = '{}% Downloaded dataset.zip'.format(i)
-        time.sleep(random.random())
-    spinner.succeed('Downloaded dataset.zip')
+    time.sleep(2)
+    spinner.text = 'Much Colors'
+    spinner.color = 'magenta'
+    time.sleep(2)
+    spinner.text = 'Very emojis'
+    spinner.spinner = 'hearts'
+    time.sleep(2)
+    spinner.stop_and_persist(symbol='🦄'.encode('utf-8'), text='Wow!')
 except (KeyboardInterrupt, SystemExit):
     spinner.stop()
+    
 echo "===================="
 echo "|    How are you?  |"
 echo "|======Select======|"
