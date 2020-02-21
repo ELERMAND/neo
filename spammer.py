@@ -48,7 +48,7 @@ Select a number from list:''')
 				phone = input(Fore.BLUE+"NeoSpammer > "+Style.RESET_ALL)
 				try:
 					if int(phone):
-						print("Enter the quantity (Enter = cancel):")
+						print("Enter the quantity cycles (ex: 1-9999+++) (Enter = cancel):")
 						count = input(Fore.BLUE+"NeoSpammer > "+Style.RESET_ALL)
 						try:
 							if int(count):
@@ -80,7 +80,7 @@ Select a number from list:''')
 									_phone = phone
 									_email = _name+f'{iteration}'+'@gmail.com'
 									email = _email
-									info = '\nNumber: {}\nQuantiity: {}'.format(phone, count)+'\nNeoSpymer is starting+++.\nIf you will need to cancel - press Ctrl+Z.'
+									info = '\nNumber: {}\nQuantity: {}'.format(phone, count)+'\nNeoSpymer is starting+++.\nIf you will need to cancel - press Ctrl+Z.'
 									os.system("clear")
 									print(logo)
 									print(info)
