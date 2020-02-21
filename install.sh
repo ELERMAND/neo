@@ -4,7 +4,7 @@ echo "|======Select======|"
 echo "|    1. Termux     |"
 echo "|    2. Unix       |"
 echo "|                  |"
-echo "| Введите 1 или 2: |"
+echo "|    Enter 1 or 2  |"
 echo "===================="
 read numb
 if [ $numb = "1" ]
@@ -15,10 +15,10 @@ then
 	pkg install dos2unix
 	pip3 install requests
 	pip3 install colorama
-	cp ~/spymer/spammer.py /data/data/com.termux/files/usr/bin/spymer
+	cp ~/neo/spammer.py /data/data/com.termux/files/usr/bin/neo
 	dos2unix /data/data/com.termux/files/usr/bin/neo
 	chmod 777 /data/data/com.termux/files/usr/bin/neo
-	neoo
+	neo
 else
 	if [ $numb = "2" ]
 	then
