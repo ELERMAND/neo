@@ -4,7 +4,7 @@ SMS+VIBER+MAIL+CALL = BOOOOOMBER !!!!!!!!!<br><i></i><br>
 Новости об обновлениях на <a href="https://t.me/eload_system">канале в Telegram</a><br>
 <b>Обязательно подпишитесь на канал в телеграме, так как именно там я пишу когда надо обновиться, чтобы сервисов было больше!</b><br><br>
 # Donates
-<b>Кому не жалко копейку на развитие проекта:</b><br>
+<b>To help this project:</b><br>
 https://www.donationalerts.com/r/neongenius
 <br>
 <br>
