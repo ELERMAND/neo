@@ -16,16 +16,16 @@ then
 	pip3 install requests
 	pip3 install colorama
 	cp ~/spymer/spammer.py /data/data/com.termux/files/usr/bin/spymer
-	dos2unix /data/data/com.termux/files/usr/bin/spymer
-	chmod 777 /data/data/com.termux/files/usr/bin/spymer
-	spymer
+	dos2unix /data/data/com.termux/files/usr/bin/neo
+	chmod 777 /data/data/com.termux/files/usr/bin/neo
+	neoo
 else
 	if [ $numb = "2" ]
 	then
 
 		if [ "$(whoami)" != 'root' ]; then
 			echo "You are not rooted. Start install.sh with root acces Example:
-            (sudo sh ~/spymer/install.sh)"
+            (sudo sh ~/neo/install.sh)"
 			exit
 		else
 			apt install python3 python3-pip dos2unix
