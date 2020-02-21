@@ -17,7 +17,7 @@ def Main():
 	ver = 71
 	version = requests.post("https://rainbow-t-shirt.com/spymer/version.php").json()["version"]
 	if int(version) > ver:
-		info = Back.RED+"\nVersion is outdated and need Update (press: 4)!"+Style.RESET_ALL
+		info = Back.RED+"\nDo Update once in the month  (press: 4)!"+Style.RESET_ALL
 	else:
 		info = " "
 	logo = Fore.RED+'''
