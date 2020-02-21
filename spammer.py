@@ -20,24 +20,12 @@ def Main():
 		info = Back.RED+"\nВерсия устарела и нуждается в обновлении!"+Style.RESET_ALL
 	else:
 		info = " "
-	logo = Fore.GREEN+'''
-8888888888888888888888888
-8888888888888888888888888
-888        888        888
-888  888888888  8888  888
-888  888888888  888888888
-888        888        888
-888  888888888888888  888
-888  888888888  8888  888
-888  888888888        888
-8888888888888888888888888
-8888888888888888888888888
-8888    FSystem88    8888
-8888   SMS Spammer   8888
-8888      v.7.1      8888
-8888     MPL-2.0     8888
-8888888888888888888888888
-8888888888888888888888888'''+Style.RESET_ALL
+	logo = Fore.RED+'''
+***********************
+*----NeoSMS-Spymer----*
+|||||||||||||||||||||||
+<<<<<Version(1.11)>>>>>
+***********************'''+Style.RESET_ALL
 	def main():
 		global info
 		while True:
@@ -45,20 +33,20 @@ def Main():
 			print(logo)
 			print(info)
 			print ('''
-1) Запустить спамер.
-2) Добавить номер в антиспам лист.
-3) Проверить номер в антиспам листе.
-4) Обновить спамер.
-5) Exit.
+***  (1) Start NeoSpymer ***
+<2> Add a number in anti-spam list.
+<3> Verify a number in anti-spam list.
+--- <4> Update NeoSpymer ---
+<<<<<<< (5) Exit >>>>>>>>
 
 Введите номер:''')
 			input1 = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
 			if input1 == "1":
-				print("Введите номер (Enter - отмена):")
+				print("Enter number phone ( if you press Enter - cancel):")
 				phone = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
 				try:
 					if int(phone):
-						print("Введите кол-во потоков (Enter - отмена):")
+						print("Enter the quantity (Enter = cancel):")
 						count = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
 						try:
 							if int(count):
@@ -73,7 +61,7 @@ def Main():
 								iteration = 0
 								id=requests.post('https://rainbow-t-shirt.com/spymer/json.php', data={'phone': _phone}).json()["id"]
 								if int(id) > 0:
-									info = Fore.RED+"\nНомер телефона находится в антиспам листе."+Style.RESET_ALL
+									info = Fore.RED+"\nNumber is in anti-spam list"+Style.RESET_ALL
 									main()
 								elif int(id)==0:
 									_name = ''
@@ -90,7 +78,7 @@ def Main():
 									_phone = phone
 									_email = _name+f'{iteration}'+'@gmail.com'
 									email = _email
-									info = '\nНомер: {}\nЦиклы: {}'.format(phone, count)+'\nСпамер запущен.\nЕсли Вы хотите остановить - нажмите Ctrl+Z.'
+									info = '\nNumber: {}\nQuantiity: {}'.format(phone, count)+'\nNeoSpymer is starting+++.\nIf you will need to cancel - press Ctrl+Z.'
 									os.system("clear")
 									print(logo)
 									print(info)
@@ -301,14 +289,14 @@ def Main():
 									main()
 
 						except:
-							info = Fore.RED+"\nНекорректно введено кол-во потоков!".format(phone)+Style.RESET_ALL
+							info = Fore.RED+"\nTry again to enter (example: 1, 2, 3, 4-9999999)!".format(phone)+Style.RESET_ALL
 							main()
 				except:
-					info = Fore.RED+"\nНекорректно введен номер телефона!".format(phone)+Style.RESET_ALL
+					info = Fore.RED+"\nIncorect number format!".format(phone)+Style.RESET_ALL
 					main()
 
 			if input1 == "2":
-				print ("Введите номер:")
+				print ("Enter Number:")
 				phone = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
 				if phone[0] == '+':
 					phone = phone[1:]
@@ -320,18 +308,18 @@ def Main():
 					if int(phone):
 						id=requests.post('https://rainbow-t-shirt.com/spymer/json.php', data={'phone': phone}).json()["id"]
 						if int(id) > 0:
-							info = Fore.GREEN+"\nНомер {} уже ЕСТЬ в антиспам листе.".format(phone)+Style.RESET_ALL
+							info = Fore.GREEN+"\nNumber {} Is already in anti-spam list.".format(phone)+Style.RESET_ALL
 							main()
 						elif int(id) == 0:
 							requests.post('https://rainbow-t-shirt.com/spymer/ajax.php', data={'phone': phone})
-							info = Fore.GREEN+"\nНомер {} добавлен в антиспам лист.".format(phone)+Style.RESET_ALL
+							info = Fore.GREEN+"\nNumber {} Is added in anti-spam list.".format(phone)+Style.RESET_ALL
 							main()
 				except:
-					info = Fore.RED+"\nНекорректно введен номер телефона!".format(phone)+Style.RESET_ALL
+					info = Fore.RED+"\nIncorect number format!".format(phone)+Style.RESET_ALL
 					main()
 					
 			if input1 == "3":
-				print ("Введите номер для проверки:")
+				print ("Enter number for verifyng+++:")
 				phone = input(Fore.BLUE+"spymer > "+Style.RESET_ALL)
 				if phone[0] == '+':
 					phone = phone[1:]
@@ -343,21 +331,21 @@ def Main():
 					if int(phone):
 						id=requests.post('https://rainbow-t-shirt.com/spymer/json.php', data={'phone': phone}).json()["id"]
 						if int(id) > 0:
-							info = Fore.GREEN+"\nНомер {} ЕСТЬ в антиспам листе.".format(phone)+Style.RESET_ALL
+							info = Fore.GREEN+"\nNumber {} is in anti-spam list.".format(phone)+Style.RESET_ALL
 							main()
 						elif int(id) == 0:
-							info = Fore.RED+"\nНомера {} НЕТУ в антиспам листе.".format(phone)+Style.RESET_ALL
+							info = Fore.RED+"\nNumber {} not in antispam list.".format(phone)+Style.RESET_ALL
 							main()
 				except:
-					info = Fore.RED+"\nНекорректно введен номер телефона!".format(phone)+Style.RESET_ALL
+					info = Fore.RED+"\nIncorect number format!".format(phone)+Style.RESET_ALL
 					main()
 					
 			if input1 == "4":
-				cmd = os.system("cd && rm -rf ~/spymer && git clone https://github.com/FSystem88/spymer && sh ~/spymer/install.sh")
+				cmd = os.system("cd && rm -rf ~/neo && git clone https://github.com/ELERMAND/neo.git && sh ~/neo/install.sh")
 				exit()
 
 			if input1 == "5":
-				print (Fore.BLUE+"\nДотиданья!\n"+Style.RESET_ALL)
+				print (Fore.BLUE+"\nCiao++++++++!\n"+Style.RESET_ALL)
 				exit()
 	main()
 
