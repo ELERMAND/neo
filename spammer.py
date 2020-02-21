@@ -41,7 +41,7 @@ def Main():
 --- <4> Update NeoSpymer ---
 <<<<<<< (5) Exit >>>>>>>>
 
-Введите номер:''')
+Select a number from list:''')
 			input1 = input(Fore.BLUE+"NeoSpammer > "+Style.RESET_ALL)
 			if input1 == "1":
 				print("Enter phone number ( if you press Enter = cancel):")
