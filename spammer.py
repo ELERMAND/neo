@@ -21,11 +21,13 @@ def Main():
 	else:
 		info = " "
 	logo = Fore.RED+'''
-***********************
-*----NeoSMS-Spammer---*
-|||||||||||||||||||||||
-*<<<Version(1.11.1)>>>*
-***********************'''+Style.RESET_ALL
+            ***********************
+            *----NeoSMS-Spammer---*
+            |||||||||||||||||||||||
+            *<<<<Eloads System>>>>*
+            |||||||||||||||||||||||
+            *<<<Version(1.11.1)>>>*
+            ***********************'''+Style.RESET_ALL
 	def main():
 		global info
 		while True:
