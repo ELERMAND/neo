@@ -1,14 +1,11 @@
-#!/bin/bash
-clear
-echo "--------------------"
-echo "|     Кто ты ?     |"
-echo "|------------------|"
-echo "| 1. Termux        |"
-echo "| 2. Другой Unix   |"
-echo "| 3. iSH           |"
+echo "===================="
+echo "|    How are you?  |"
+echo "|======Select======|"
+echo "|    1. Termux     |"
+echo "|    2. Unix       |"
 echo "|                  |"
-echo "| Введите 1/2/3:   |"
-echo "--------------------"
+echo "|   Enter 1 or 2   |"
+echo "===================="
 read numb
 if [ $numb = "1" ]
 then
@@ -18,16 +15,17 @@ then
 	pkg install dos2unix
 	pip3 install requests
 	pip3 install colorama
-	cp ~/spymer/spammer.py /data/data/com.termux/files/usr/bin/spymer
-	dos2unix /data/data/com.termux/files/usr/bin/spymer
-	chmod 777 /data/data/com.termux/files/usr/bin/spymer
-	spymer
+	cp ~/neo/spammer.py /data/data/com.termux/files/usr/bin/neo
+	dos2unix /data/data/com.termux/files/usr/bin/neo
+	chmod 777 /data/data/com.termux/files/usr/bin/neo
+	neo
 else
 	if [ $numb = "2" ]
 	then
-		if [ "$(whoami)" != 'root' ];
-		then
-			echo "У вас нет прав. Запустите install.sh с root правами (sudo sh ~/spymer/install.sh)"
+
+		if [ "$(whoami)" != 'root' ]; then
+			echo "You are not rooted. Start install.sh with root acces Example:
+            (sudo sh ~/neo/install.sh)"
 			exit
 		else
 			apt install python3 python3-pip dos2unix
@@ -39,19 +37,6 @@ else
 			spymer
 		fi
 	else
-		if [ $numb = "3" ] 
-		then
-			apk add python
-			apk add python3
-			apk add dos2unix
-			pip3 install requests
-			pip3 install colorama
-			cp ~/spymer/spammer.py /usr/bin/spymer
-			dos2unix /usr/bin/spymer
-			chmod 777 /usr/bin/spymer
-			spymer
-		else
-			echo "Некорректный ввод"
-		fi
+		echo "Incorrect try again....going to succes :)"
 	fi
 fi
