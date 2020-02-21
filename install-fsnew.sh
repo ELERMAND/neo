@@ -46,10 +46,10 @@ else
 			apk add dos2unix
 			pip3 install requests
 			pip3 install colorama
-			cp ~/spymer/spammer.py /usr/bin/spymer
-			dos2unix /usr/bin/spymer
-			chmod 777 /usr/bin/spymer
-			spymer
+			cp ~/spymer/spammer-ver2.py /usr/bin/neo
+			dos2unix /usr/bin/neo
+			chmod 777 /usr/bin/neo
+			neo
 		else
 			echo "Incorrect Entered"
 		fi
