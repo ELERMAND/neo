@@ -35,10 +35,10 @@ def Main():
 			print(logo)
 			print(info)
 			print ('''
-***  (1) Start NeoSpymer ***
+***  (1) Start NeoSpammer ***
 <2> Add a number in anti-spam list.
 <3> Verify a number in anti-spam list.
---- <4> Update NeoSpymer ---
+--- <4> Update NeoSpammer ---
 <<<<<<< (5) Exit >>>>>>>>
 
 Select a number from list:''')
