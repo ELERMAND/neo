@@ -20,6 +20,16 @@ https://www.donationalerts.com/r/neongenius
 another command to join in file what is neo spammer :
 • <code>cd neo</code><br>
 <br>
+<b>If you are iOS</a> - download <a href="https://apps.apple.com/ru/app/testflight/id899247664">Testflight from App Store</a>, and after subscribe to testing this <a href="https://testflight.apple.com/join/97i7KM8O">iSH в Testflight</a> and write this commands:<br>
+• <code>apk update</code><br>
+• <code>apk upgrade</code><br>
+• <code>apk add git</code><br>
+• <code>git clone https://github.com/ELERMAND/neo</code><br>
+• <code>sh neo/install.sh</code><br>
+• <code>spymer</code><br>
+<br>
+Install on linux is exactly what on android...<br>
+<br><br>
 OR:
 • <code>ls   //// and select install.sh (example: sh install.sh) </code><br>
 • <code>sh install.sh</code><br>
